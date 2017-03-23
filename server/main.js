@@ -1,5 +1,9 @@
 import { Meteor } from 'meteor/meteor';
+import { Order } from './../imports/api/order';
+import { Tickets } from './../imports/api/tickets';
 
-Meteor.startup(() => {
-  // code to run on server at startup
+Meteor.startup(function () {
+    Order.insert({
+        
+    });
 });
