@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 // Logic
-import Form from "../logic/Form";
+import Form from "../logic/StartForm";
 
 export default class App extends Component {
     render() {
