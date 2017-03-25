@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 import { Session } from 'meteor/session';
+
+import Navbar from "../ui/Navbar";
+import Footer from "../ui/Footer";
 
 export default class StartForm extends Component {
     handleSubmit(event) {
@@ -29,29 +33,31 @@ export default class StartForm extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit.bind(this)}>
-                    <label>
-                        Nom :
-                        <input type="text" name="lastname" ref="lastnameInput" />
-                    </label>
-                    <label>
-                        Prénom :
-                        <input type="text" name="firstname" ref="firstNameInput" />
-                    </label>
-                    <label>
-                        Email :
-                        <input type="email" name="email" ref="emailInput" />
-                    </label>
-                    <label>
-                        Date d'entrée :
-                        <input type="date" name="email" ref="dateInput" />
-                    </label>
-                    <label>
-                        Code de réduction :
-                        <input type="text" name="reduction" ref="reductionInput" />
-                    </label>
-                </form>
-                <button type="submit">Commencer la commande</button>
+                <Navbar/>
+                    <form onSubmit={this.handleSubmit.bind(this)}>
+                        <label>
+                            Nom :
+                            <input type="text" name="lastname" ref="lastnameInput" />
+                        </label>
+                        <label>
+                            Prénom :
+                            <input type="text" name="firstname" ref="firstNameInput" />
+                        </label>
+                        <label>
+                            Email :
+                            <input type="email" name="email" ref="emailInput" />
+                        </label>
+                        <label>
+                            Date d'entrée :
+                            <input type="date" name="email" ref="dateInput" />
+                        </label>
+                        <label>
+                            Code de réduction :
+                            <input type="text" name="reduction" ref="reductionInput" />
+                        </label>
+                    </form>
+                    <button type="submit"><Link to="/tickets">Commencer la commande</Link></button>
+                <Footer/>
             </div>
         )
     }

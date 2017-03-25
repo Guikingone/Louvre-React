@@ -1,0 +1,17 @@
+stages:
+    - test
+    - build
+    - performances
+    - deploy
+
+test:
+    stage: test
+    before_script:
+        - meteor npm install
+    script:
+        - echo "Test phase"
+
+deploy:
+    stage: deploy
+    before_script:
+        - meteor npm install

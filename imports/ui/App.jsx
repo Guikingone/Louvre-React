@@ -11,10 +11,8 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
                 <Form/>
                 <p>Hello World from react !</p>
-                <Footer/>
             </div>
         );
     }

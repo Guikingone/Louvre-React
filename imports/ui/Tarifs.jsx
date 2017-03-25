@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-export default class TicketsForm extends Component {
+export default class Tarifs extends Component {
     render() {
         return (
             <div>
-                <p>Hello World !</p>
+                <p> hello from the tarifs !</p>
             </div>
         );
     }
